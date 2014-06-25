@@ -5,12 +5,12 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[Map data © OpenStreetMap contributors]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-74.01877641677856,40.63615444918681,17</Parameter>
+  <Parameter name="center">-73.96862983703613,40.653229459789266,13</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">22</Parameter>
   <Parameter name="minzoom">0</Parameter>
   <Parameter name="name"><![CDATA[sbk]]></Parameter>
-  <Parameter name="scale">1</Parameter>
+  <Parameter name="scale">2</Parameter>
   <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-streets-v4]]></Parameter>
 </Parameters>
 
@@ -70,37 +70,287 @@
 
 <Style name="road" filter-mode="first">
   <Rule>
+    <MaxScaleDenominator>250</MaxScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="22" stroke="#000000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <MinScaleDenominator>250</MinScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="21" stroke="#000000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="20" stroke="#000000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="19" stroke="#000000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="16" stroke="#000000" />
+  </Rule>
+  <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="12" stroke="#f9f0e3" />
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="14" stroke="#000000" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="10" stroke="#f9f0e3" />
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="12" stroke="#000000" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#000000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#000000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#000000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#000000" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>250</MaxScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="22" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <MinScaleDenominator>250</MinScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="21" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="20" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="19" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="16" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="14" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="12" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
     <LineSymbolizer stroke-width="8" stroke="#f9f0e3" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="6" stroke="#f9f0e3" />
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f9f0e3" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
     <LineSymbolizer stroke-width="4" stroke="#f9f0e3" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>100000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="0" stroke="#f9f0e3" />
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#f9f0e3" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>400000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="0" />
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#f9f0e3" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>250</MaxScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="22" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <MinScaleDenominator>250</MinScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="21" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="20" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="19" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="16" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="14" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="12" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#f9f0e3" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>250</MaxScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="22" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <MinScaleDenominator>250</MinScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="21" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="20" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="19" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="16" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="14" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="12" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="8" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([class] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke="#f9f0e3" stroke-width="2" />
   </Rule>
 </Style>
 <Layer name="road"

@@ -34,28 +34,103 @@ Map {
 }
 
 #road {
-  [zoom>=11] {
-    line-color: #f9f0e3;
-  }
-  [zoom<=12] {
-    line-width: 0;
-  }
-  [zoom=13] {
-    line-width: 4;
-  }
-  [zoom=14] {
-    line-width: 6;
-  }
-  [zoom=15] {
-    line-width: 8;
-  }
-  [zoom=16] {
-    line-width: 10;
-  }
-  [zoom>=17] {
-    line-width: 12;
+  [class='motorway'],
+  [class='motorway_link'],
+  [class='main'] {
+    [zoom>=11] {
+      line-color: #f9f0e3;
+       line-width: 2
+    }
+    [zoom=12] {
+      line-width: 2;
+    }
+    [zoom=13] {
+      line-width: 4;
+    }
+    [zoom=14] {
+      line-width: 4;
+    }
+    [zoom=15] {
+      line-width: 8;
+    }
+    [zoom=16] {
+      line-width: 12;
+    }
+    [zoom>=17] {
+      line-width: 14;
+    }
+    [zoom>=18] {
+      line-width: 16;
+    }
+    [zoom>=19] {
+      line-width: 18;
+    }
+    [zoom>=19] {
+      line-width: 19;
+    }
+    [zoom>=20] {
+      line-width: 20;
+    }
+    [zoom>=21] {
+      line-width: 21;
+    }
+    [zoom>=22] {
+      line-width: 22;
+    }
   }
 }
+
+#road {
+  [class='street'] {
+    [zoom>=11] {
+      line-color: #000;
+    }
+    [zoom<=12] {
+      line-width:.5;
+    }
+    [zoom=13] {
+      line-width: 1;
+    }
+    [zoom=14] {
+      line-width: 2;
+    }
+    [zoom=15] {
+      line-width: 8;
+    }
+    [zoom=16] {
+      line-width: 12;
+    }
+    [zoom>=17] {
+      line-width: 14;
+    }
+    [zoom>=18] {
+      line-width: 16;
+    }
+    [zoom>=19] {
+      line-width: 18;
+    }
+    [zoom>=19] {
+      line-width: 19;
+    }
+    [zoom>=20] {
+      line-width: 20;
+    }
+    [zoom>=21] {
+      line-width: 21;
+    }
+    [zoom>=22] {
+      line-width: 22;
+    }
+  }
+}
+
+
+
+
+
+
+
+
 #road_label 
   [zoom=17]{  
     [class='main'],  
