@@ -9,16 +9,16 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -73.948974609375
-  - 40.650038657421916
-  - 12
+  - -74.01877641677856
+  - 40.63615444918681
+  - 17
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
-maxzoom: 16
-minzoom: 9
-mtime: 1403645804961
+maxzoom: 22
+minzoom: 0
+mtime: 1403655381220
 name: sbk
 scale: 1
 source: "mapbox:///mapbox.mapbox-streets-v4"

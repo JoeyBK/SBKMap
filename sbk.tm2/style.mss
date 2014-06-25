@@ -41,14 +41,36 @@ Map {
     line-width: 0;
   }
   [zoom=13] {
-    line-width: 1;
+    line-width: 4;
   }
   [zoom=14] {
-    line-width: 2;
+    line-width: 6;
   }
-  [zoom>=15] {
-    line-width: 3;
+  [zoom=15] {
+    line-width: 8;
+  }
+  [zoom=16] {
+    line-width: 10;
+  }
+  [zoom>=17] {
+    line-width: 12;
   }
 }
-
+#road_label 
+  [zoom=17]{  
+    [class='main'],  
+    [class='street']{
+     text-name: [name];
+     text-face-name: 'Roboto Thin';
+     text-size: 11;   
+     text-placement: line;
+     text-fill: #000;
+     text-halo-fill: #fff;
+     text-halo-radius: 2;   
+     text-min-path-length: 100;
+     text-character-spacing: 2; 
+     text-spacing: 10000;
+     text-allow-overlap: false;
+  }
+}
 

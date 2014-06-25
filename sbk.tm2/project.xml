@@ -5,10 +5,10 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[Map data © OpenStreetMap contributors]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-73.948974609375,40.650038657421916,12</Parameter>
+  <Parameter name="center">-74.01877641677856,40.63615444918681,17</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
-  <Parameter name="maxzoom">16</Parameter>
-  <Parameter name="minzoom">9</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="minzoom">0</Parameter>
   <Parameter name="name"><![CDATA[sbk]]></Parameter>
   <Parameter name="scale">1</Parameter>
   <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-streets-v4]]></Parameter>
@@ -70,18 +70,28 @@
 
 <Style name="road" filter-mode="first">
   <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="12" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="10" stroke="#f9f0e3" />
+  </Rule>
+  <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="3" stroke="#f9f0e3" />
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke-width="8" stroke="#f9f0e3" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="2" stroke="#f9f0e3" />
+    <LineSymbolizer stroke-width="6" stroke="#f9f0e3" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <LineSymbolizer stroke-width="1" stroke="#f9f0e3" />
+    <LineSymbolizer stroke-width="4" stroke="#f9f0e3" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>
@@ -133,9 +143,23 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
       </Layer>
 
+<Style name="road_label" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'street')</Filter>
+    <TextSymbolizer face-name="Roboto Thin" size="11" placement="line" fill="#000000" halo-fill="#ffffff" halo-radius="2" minimum-path-length="100" character-spacing="2" spacing="10000" allow-overlap="false" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'main')</Filter>
+    <TextSymbolizer face-name="Roboto Thin" size="11" placement="line" fill="#000000" halo-fill="#ffffff" halo-radius="2" minimum-path-length="100" character-spacing="2" spacing="10000" allow-overlap="false" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
 <Layer name="road_label"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>road_label</StyleName>  </Layer>
 
 <Layer name="waterway_label"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
